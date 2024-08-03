@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s  # How often to scrape targets by default
+
+scrape_configs:
+  - job_name: 'nodejs-backend'
+    static_configs:
+      - targets: ['backend:5000']
+
+  - job_name: 'flask-ai'
+    static_configs:
+      - targets: ['ai:5001']
